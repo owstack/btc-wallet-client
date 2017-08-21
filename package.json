@@ -26,6 +26,7 @@
   "dependencies": {
     "async": "^0.9.0",
     "bip38": "^1.3.0",
+    "btccore-lib": "git://github.com/owstack/btccore-lib.git#master",
     "btccore-mnemonic": "git://github.com/owstack/btccore-mnemonic.git#master",
     "btccore-payment-protocol": "git://github.com/owstack/btccore-payment-protocol.git#master",
     "json-stable-stringify": "^1.0.0",
@@ -33,9 +34,6 @@
     "preconditions": "^1.0.8",
     "sjcl": "1.0.3",
     "superagent": "^3.4.1"
-  },
-  "peerDependencies": {
-    "bitcore-lib": "git://github.com/owstack/btccore-lib.git#master"
   },
   "devDependencies": {
     "btccore-wallet-service": "git://github.com/owstack/btccore-wallet-service.git#master",

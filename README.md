@@ -6,6 +6,10 @@
 
 The *official* client library for [btccore-wallet-service] (https://github.com/owstack/btccore-wallet-service).
 
+## Attribution
+
+This repository was created by copy forking [bitcore-wallet-client commit d986bbb] (https://github.com/bitpay/bitcore-wallet-client/commit/d986bbb69d01be56f1cfd09c89625f587de2bc02).
+
 ## Description
 
 This package communicates with BWS [Btccore wallet service](https://github.com/owstack/btccore-wallet-service) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BWS are checked independently by the peers, thus the importance of using this library when talking to a third party BWS instance.
