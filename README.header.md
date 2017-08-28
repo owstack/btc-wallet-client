@@ -4,17 +4,17 @@
 [![Build Status](https://img.shields.io/travis/owstack/btccore-wallet-client.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btccore-wallet-client) 
 [![Coverage Status](https://coveralls.io/repos/owstack/btccore-wallet-client/badge.svg)](https://coveralls.io/r/owstack/btccore-wallet-client)
 
-The *official* client library for [btccore-wallet-service] (https://github.com/owstack/btccore-wallet-service).
+The *official* client library for [btccore-wallet-service](https://github.com/owstack/btccore-wallet-service).
 
 ## Attribution
 
-This repository was created by copy forking [bitcore-wallet-client commit d986bbb] (https://github.com/bitpay/bitcore-wallet-client/commit/d986bbb69d01be56f1cfd09c89625f587de2bc02).
+This repository was created by copy forking [bitcore-wallet-client commit d986bbb](https://github.com/bitpay/bitcore-wallet-client/commit/d986bbb69d01be56f1cfd09c89625f587de2bc02).
 
 ## Description
 
 This package communicates with BWS [Btccore wallet service](https://github.com/owstack/btccore-wallet-service) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BWS are checked independently by the peers, thus the importance of using this library when talking to a third party BWS instance.
 
-See [Btccore-wallet] (https://github.com/owstack/btccore-wallet) for a simple CLI wallet implementation that relays on BWS and uses btccore-wallet-client.
+See [Btccore-wallet](https://github.com/owstack/btccore-wallet) for a simple CLI wallet implementation that relays on BWS and uses btccore-wallet-client.
 
 ## Get Started
 
@@ -43,7 +43,7 @@ var client = new Client({
   verbose: false,
 });
 
-client.createWallet("My Wallet", "Irene", 2, 2, {network: 'testnet/btc'}, function(err, secret) {
+client.createWallet("My Wallet", "Irene", 2, 2, {network: 'testnet'}, function(err, secret) {
   if (err) {
     console.log('error: ',err); 
     return
