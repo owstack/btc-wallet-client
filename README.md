@@ -12,9 +12,9 @@ This repository was created by copy forking [bitcore-wallet-client commit d986bb
 
 ## Description
 
-This package communicates with BWS [Btccore wallet service](https://github.com/owstack/btccore-wallet-service) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BWS are checked independently by the peers, thus the importance of using this library when talking to a third party BWS instance.
+This package communicates with BTCWS [Btccore wallet service](https://github.com/owstack/btccore-wallet-service) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BTCWS are checked independently by the peers, thus the importance of using this library when talking to a third party BTCWS instance.
 
-See [Btccore-wallet](https://github.com/owstack/btccore-wallet) for a simple CLI wallet implementation that relays on BWS and uses btccore-wallet-client.
+See [Btccore-wallet](https://github.com/owstack/btccore-wallet) for a simple CLI wallet implementation that relays on BTCWS and uses btccore-wallet-client.
 
 ## Get Started
 
@@ -36,10 +36,10 @@ var Client = require('btccore-wallet-client');
 
 
 var fs = require('fs');
-var BWS_INSTANCE_URL = 'https://bws.openwalletstack.com/bws/api'
+var BTCWS_INSTANCE_URL = 'https://btcws.openwalletstack.com/btcws/api'
 
 var client = new Client({
-  baseUrl: BWS_INSTANCE_URL,
+  baseUrl: BTCWS_INSTANCE_URL,
   verbose: false,
 });
 
@@ -62,7 +62,7 @@ var Client = require('btccore-wallet-client');
 
 
 var fs = require('fs');
-var BWS_INSTANCE_URL = 'https://bws.openwalletstack.com/bws/api'
+var BTCWS_INSTANCE_URL = 'https://btcws.openwalletstack.com/btcws/api'
 
 var secret = process.argv[2];
 if (!secret) {
@@ -72,7 +72,7 @@ if (!secret) {
 }
 
 var client = new Client({
-  baseUrl: BWS_INSTANCE_URL,
+  baseUrl: BTCWS_INSTANCE_URL,
   verbose: false,
 });
 
