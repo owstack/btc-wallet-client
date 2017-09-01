@@ -1,4 +1,5 @@
-# btccore-wallet-client
+Btccore Wallet Client
+======
 
 [![NPM Package](https://img.shields.io/npm/v/btccore-wallet-client.svg?style=flat-square)](https://www.npmjs.org/package/btccore-wallet-client)
 [![Build Status](https://img.shields.io/travis/owstack/btccore-wallet-client.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btccore-wallet-client) 

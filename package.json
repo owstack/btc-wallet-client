@@ -1,12 +1,10 @@
 {
   "name": "btccore-wallet-client",
-  "description": "Client for btccore-wallet-service",
-  "author": "Open Wallet Stack",
+  "description": "Client for btccore-wallet-service.",
   "version": "0.0.1",
   "license": "MIT",
   "keywords": [
     "bitcoin",
-    "copay",
     "multisig",
     "wallet",
     "client",
@@ -56,12 +54,5 @@
     "test": "./node_modules/.bin/mocha",
     "coveralls": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage",
     "docs": "./node_modules/.bin/jsdox lib/* lib/common lib/errors -o docs && cat README.header.md  docs/*.md LICENSE > README.md"
-  },
-  "contributors": [{
-    "name": "Ivan Socolsky",
-    "email": "ivan@bitpay.com"
-  }, {
-    "name": "Matias Alejo Garcia",
-    "email": "ematiu@gmail.com"
-  }]
+  }
 }

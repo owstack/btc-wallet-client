@@ -3,11 +3,9 @@
   "main": "index.js",
   "version": "0.0.1",
   "homepage": "https://github.com/owstack/btccore-wallet-client",
-  "authors": ["Open Wallet Stack"],
-  "description": "Client for btccore-wallet-service",
+  "description": "Client for btccore-wallet-service.",
   "keywords": [
     "bitcoin",
-    "copay",
     "multisig",
     "wallet",
     "client",
