@@ -2,7 +2,7 @@
   "name": "btccore-wallet-client",
   "description": "Client for btccore-wallet-service",
   "author": "Open Wallet Stack",
-  "version": "5.4.0",
+  "version": "0.0.1",
   "license": "MIT",
   "keywords": [
     "bitcoin",
