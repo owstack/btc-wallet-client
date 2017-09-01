@@ -1,7 +1,7 @@
 {
   "name": "btccore-wallet-client",
   "main": "index.js",
-  "version": "2.1.1",
+  "version": "0.0.1",
   "homepage": "https://github.com/owstack/btccore-wallet-client",
   "authors": ["Open Wallet Stack"],
   "description": "Client for btccore-wallet-service",
