@@ -2472,6 +2472,58 @@ describe('client API', function() {
         });
       });
     });
+  });
+
+  describe('Transaction Proposal signing', function() {
+    this.timeout(5000);
+    function setup(m, n, network, cb) {
+      helpers.createAndJoinWallet(clients, m, n, {
+        network: network,
+      }, function(w) {
+        clients[0].createAddress(function(err, address) {
+          should.not.exist(err);
+          blockchainExplorerMock.setUtxo(address, 2, 2);
+          blockchainExplorerMock.setUtxo(address, 2, 2);
+          blockchainExplorerMock.setUtxo(address, 1, 2, 0);
+          cb();
+        });
+      });
+    };
+
+    beforeEach(function(done) {
+      setup(1, 1, 'livenet', done);
+    });
+
+    it.only('Should sign proposal', function(done) {
+      var toAddress = '1PuKMvRFfwbLXyEPXZzkGi111gMUCs6uE3';
+      var opts = {
+        outputs: [{
+          amount: 1e8,
+          toAddress: toAddress,
+        }, {
+          amount: 2e8,
+          toAddress: toAddress,
+        }],
+        feePerKb: 100e2,
+        message: 'just some message'
+      };
+      clients[0].createTxProposal(opts, function(err, txp) {
+        should.not.exist(err);
+        should.exist(txp);
+        clients[0].publishTxProposal({
+          txp: txp,
+        }, function(err, publishedTxp) {
+          should.not.exist(err);
+          should.exist(publishedTxp);
+          publishedTxp.status.should.equal('pending');
+          clients[0].signTxProposal(publishedTxp, function(err, txp) {
+            should.not.exist(err);
+            txp.status.should.equal('accepted');
+            done();
+          });
+        });
+      });
+    });
 
     it('Should sign proposal with no change', function(done) {
       var toAddress = 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5';
@@ -3283,6 +3335,7 @@ describe('client API', function() {
       });
     });
     it('should get transaction history decorated with proposal & notes', function(done) {
+      this.timeout(5000);
       async.waterfall([
 
         function(next) {
