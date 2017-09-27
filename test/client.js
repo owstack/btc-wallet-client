@@ -113,10 +113,10 @@ helpers.createAndJoinWallet = function(clients, m, n, opts, cb) {
   opts = opts || {};
 
   clients[0].seedFromRandomWithMnemonic({
-    network: Constants.TESTNET
+    network: opts.network || Constants.TESTNET
   });
   clients[0].createWallet('mywallet', 'creator', m, n, {
-    network: Constants.TESTNET,
+    network: opts.network || Constants.TESTNET,
     singleAddress: !!opts.singleAddress,
   }, function(err, secret) {
     should.not.exist(err);
@@ -2491,11 +2491,11 @@ describe('client API', function() {
     };
 
     beforeEach(function(done) {
-      setup(1, 1, 'livenet', done);
+      setup(2, 3, 'testnet', done);
     });
 
-    it.only('Should sign proposal', function(done) {
-      var toAddress = '1PuKMvRFfwbLXyEPXZzkGi111gMUCs6uE3';
+    it('Should sign proposal', function(done) {
+      var toAddress = 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5';
       var opts = {
         outputs: [{
           amount: 1e8,
@@ -2518,13 +2518,15 @@ describe('client API', function() {
           publishedTxp.status.should.equal('pending');
           clients[0].signTxProposal(publishedTxp, function(err, txp) {
             should.not.exist(err);
-            txp.status.should.equal('accepted');
-            done();
+            clients[1].signTxProposal(publishedTxp, function(err, txp) {
+              should.not.exist(err);
+              txp.status.should.equal('accepted');
+              done();
+            });
           });
         });
       });
     });
-
     it('Should sign proposal with no change', function(done) {
       var toAddress = 'n2TBMPzPECGUfcT2EByiTJ12TPZkhN2mN5';
       var opts = {
