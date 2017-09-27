@@ -25,7 +25,7 @@
     "async": "^0.9.0",
     "bip38": "^1.3.0",
     "btccore-lib": "https://github.com/owstack/btccore-lib",
-    "btccore-mnemonic": "https://github.com/owstack/btccore-mnemonic.git",
+    "btccore-mnemonic": "https://github.com/owstack/btccore-mnemonic",
     "btccore-payment-protocol": "https://github.com/owstack/btccore-payment-protocol",
     "json-stable-stringify": "^1.0.0",
     "lodash": "^3.3.1",
