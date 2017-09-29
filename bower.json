@@ -1,15 +1,15 @@
 {
-  "name": "btccore-wallet-client",
+  "name": "btc-wallet-client",
   "main": "index.js",
   "version": "0.0.1",
-  "homepage": "https://github.com/owstack/btccore-wallet-client",
-  "description": "Client for btccore-wallet-service.",
+  "homepage": "https://github.com/owstack/btc-wallet-client",
+  "description": "Client for btc-wallet-service.",
   "keywords": [
     "bitcoin",
     "multisig",
     "wallet",
     "client",
-    "btccore"
+    "btc"
   ],
   "ignore": [
     "**/.*",
