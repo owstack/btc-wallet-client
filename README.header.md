@@ -1,11 +1,11 @@
-Btccore Wallet Client
+Btc Wallet Client
 ======
 
-[![NPM Package](https://img.shields.io/npm/v/btccore-wallet-client.svg?style=flat-square)](https://www.npmjs.org/package/btccore-wallet-client)
-[![Build Status](https://img.shields.io/travis/owstack/btccore-wallet-client.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btccore-wallet-client) 
-[![Coverage Status](https://coveralls.io/repos/owstack/btccore-wallet-client/badge.svg)](https://coveralls.io/r/owstack/btccore-wallet-client)
+[![NPM Package](https://img.shields.io/npm/v/btc-wallet-client.svg?style=flat-square)](https://www.npmjs.org/package/btc-wallet-client)
+[![Build Status](https://img.shields.io/travis/owstack/btc-wallet-client.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btc-wallet-client) 
+[![Coverage Status](https://coveralls.io/repos/owstack/btc-wallet-client/badge.svg)](https://coveralls.io/r/owstack/btc-wallet-client)
 
-The *official* client library for [btccore-wallet-service](https://github.com/owstack/btccore-wallet-service).
+The *official* client library for [btc-wallet-service](https://github.com/owstack/btc-wallet-service).
 
 ## Attribution
 
@@ -13,27 +13,27 @@ This repository was created by copy forking [bitcore-wallet-client commit d986bb
 
 ## Description
 
-This package communicates with BTCWS [Btccore wallet service](https://github.com/owstack/btccore-wallet-service) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BTCWS are checked independently by the peers, thus the importance of using this library when talking to a third party BTCWS instance.
+This package communicates with BTCWS [Btc wallet service](https://github.com/owstack/btc-wallet-service) using the REST API. All REST endpoints are wrapped as simple async methods. All relevant responses from BTCWS are checked independently by the peers, thus the importance of using this library when talking to a third party BTCWS instance.
 
-See [Btccore-wallet](https://github.com/owstack/btccore-wallet) for a simple CLI wallet implementation that relays on BTCWS and uses btccore-wallet-client.
+See [Btc-wallet](https://github.com/owstack/btc-wallet) for a simple CLI wallet implementation that relays on BTCWS and uses btc-wallet-client.
 
 ## Get Started
 
-You can start using btccore-wallet-client in any of these two ways:
+You can start using btc-wallet-client in any of these two ways:
 
-* via [Bower](http://bower.io/): by running `bower install btccore-wallet-client` from your console
-* or via [NPM](https://www.npmjs.com/package/btccore-wallet-client): by running `npm install btccore-wallet-client` from your console.
+* via [Bower](http://bower.io/): by running `bower install btc-wallet-client` from your console
+* or via [NPM](https://www.npmjs.com/package/btc-wallet-client): by running `npm install btc-wallet-client` from your console.
 
 ## Example
 
-Start your own local [Btccore wallet service](https://github.com/owstack/btccore-wallet-service) instance. In this example we assume you have `btccore-wallet-service` running on your `localhost:3232`.
+Start your own local [Btc wallet service](https://github.com/owstack/btc-wallet-service) instance. In this example we assume you have `btc-wallet-service` running on your `localhost:3232`.
 
 Then create two files `irene.js` and `tomas.js` with the content below:
 
 **irene.js**
 
 ``` javascript
-var Client = require('btccore-wallet-client');
+var Client = require('btc-wallet-client');
 
 
 var fs = require('fs');
@@ -59,7 +59,7 @@ client.createWallet("My Wallet", "Irene", 2, 2, {network: 'testnet'}, function(e
 
 ``` javascript
 
-var Client = require('btccore-wallet-client');
+var Client = require('btc-wallet-client');
 
 
 var fs = require('fs');
@@ -109,10 +109,10 @@ client.joinWallet(secret, "Tomas", {}, function(err, wallet) {
 });
 ```
 
-Install `btccore-wallet-client` before start:
+Install `btc-wallet-client` before start:
 
 ```
-npm i btccore-wallet-client
+npm i btc-wallet-client
 ```
 
 Create a new wallet with the first script:
