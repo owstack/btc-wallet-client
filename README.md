@@ -2,7 +2,7 @@ Btc Wallet Client
 ======
 
 [![NPM Package](https://img.shields.io/npm/v/btc-wallet-client.svg?style=flat-square)](https://www.npmjs.org/package/btc-wallet-client)
-[![Build Status](https://img.shields.io/travis/owstack/btc-wallet-client.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btc-wallet-client)
+[![Build Status](https://img.shields.io/travis/owstack/btc-wallet-client.svg?branch=master&style=flat-square)](https://travis-ci.org/owstack/btc-wallet-client?branch=master)
 [![Coverage Status](https://coveralls.io/repos/owstack/btc-wallet-client/badge.svg)](https://coveralls.io/r/owstack/btc-wallet-client)
 
 The *official* client library for [btc-wallet-service](https://github.com/owstack/btc-wallet-service).
