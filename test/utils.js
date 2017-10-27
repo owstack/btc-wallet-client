@@ -4,7 +4,7 @@ var _ = require('lodash');
 var chai = require('chai');
 var sinon = require('sinon');
 var should = chai.should();
-var btcLib = require('btc-lib');
+var btcLib = require('@owstack/btc-lib');
 
 var Utils = require('../lib/common/utils');
 

@@ -15,10 +15,10 @@ var tingodb = require('tingodb')({
 
 var log = require('../lib/log');
 
-var btcLib = require('btc-lib');
-var btcPayPro = require('btc-payment-protocol');
+var btcLib = require('@owstack/btc-lib');
+var btcPayPro = require('@owstack/btc-payment-protocol');
 
-var BTCWS = require('btc-wallet-service');
+var BTCWS = require('@owstack/btc-wallet-service');
 
 var Common = require('../lib/common');
 var Constants = Common.Constants;
