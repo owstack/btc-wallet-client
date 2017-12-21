@@ -1,7 +1,7 @@
 {
   "name": "@owstack/btc-wallet-client",
   "description": "Client for btc-wallet-service.",
-  "version": "0.0.8",
+  "version": "0.0.9",
   "license": "MIT",
   "keywords": [
     "bitcoin",

@@ -1229,7 +1229,7 @@ describe('client API', function() {
       // Unknown walletId
       var oldSecret = '3bJKRn1HkQTpwhVaJMaJ22KwsjN24ML9uKfkSrP7iDuq91vSsTEygfGMMpo6kWLp1pXG9wZSKcT';
       clients[0].joinWallet(oldSecret, 'copayer', {}, function(err, result) {
-        err.should.be.an.instanceOf(Errors.WALLET_NOT_FOUND);
+        err.message.should.contain('Invalid secret');
         done();
       });
     });
